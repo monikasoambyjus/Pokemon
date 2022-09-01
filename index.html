@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="https://i.imgur.com/3kL1UeX.png">
+  <link rel="stylesheet" href="style.css">
+  <title>PokeDex</title>
+</head>
+
+<body>
+  <div class="nav-container">
+    <nav class="nav-main">
+      <div class="nav-logo">
+        <a href="#">
+          <img src="./images/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul class="links">
+          <li><a href="index.html">Pokemons</a></li>
+          <li><a href="#">Type</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+        <div class="itemCount">Items: <span class="showNumbers" id="totalPokemons"></span></div>
+      </div>
+    </nav>
+  </div>
+  <div id="pokemons" class="pokemons">
+
+  </div>
+  <div>
+    <button type="button" id="prev">Previous Page</button>
+    <span class="showItems">Showing <span id="from"></span> to <span id="to"></span> of <span id="total"></span> Items
+    </span>
+
+    <button type="button" id="next">  Next Page  </button>
+
+  </div>
+  <div class="footer">Created by Monika Soam for Byju's Teachers</div>
+  <script src="index.js"></script>
+
+
+  <div class="overlay">
+    <div class="close"><span id="close">X</span></div>
+    <div class="modal">
+      <div class="pokebox">
+
+        <!-- This is the top part of the card -->
+
+        <div class="pokehead">
+          <span class="blue-circle"></span>
+          <span class="red-circle"></span>
+          <span class="yellow-circle"></span>
+          <span class="green-circle"></span>
+        </div>
+
+        <!-- This is middle section of the card -->
+
+        <div class="pokebody">
+          <div class="poke-gray">
+            <div class="circle-container">
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </div>
+            <div class="poke-container" id="background">
+              <div class="image-container">
+                <img src='#' id="pokemon_img" alt='none'>
+              </div>
+            </div>
+            <div class="box-buttons">
+              <span class="circle2"></span>
+              <img src="./images/menu.png" alt="menu" class="burger">
+            </div>
+          </div>
+        </div>
+        <!-- Comment section -->
+        <div class="comment-form">
+          <p class="add">Add a comment</p>
+          <form method="post" class="form">
+            <input type="text" name="name" id="username" placeholder="Your name.." class="form-name">
+            <textarea name="comment" id="comment" placeholder="Add your insights.." class="form-com"></textarea>
+            <input type="button" id="addComment" name="submit" value="Submit" class="form-submit">
+          </form>
+        </div>
+        <div class="comment-section">
+          <h2 class="comments-number"><span id="total-comments"> 0 Dynamic Comments</span></h2>
+          <table class="comments">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Comment</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="comments_rows"> </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>
